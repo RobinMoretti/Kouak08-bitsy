@@ -8,8 +8,9 @@
 
 html{
     font-family: 'Agrandir', sans-serif;
-    // color: $brown;
-    // font-size: 25px;
+    color: #1F0318;
+    font-size: 20px;
+    line-height: 1.35rem;
     
     // @media screen and (max-width: 710px) {
     //     font-size: 18px;
@@ -18,3 +19,6 @@ html{
 
 * {-webkit-font-smoothing: antialiased;}
 
+a{
+    text-decoration: underline;
+}
