@@ -14,36 +14,50 @@
     <header>
         <h1>KOUAK nº8</h1>
         <p>Novembre 2022 ☞ Bitsy </p>
-        <h2 class="align-right bold">ESAD Orléans <br> 3ème année</h2>    
+        <h2 class="align-right bold italic">ESAD Orléans <br> 3ème année</h2>    
     </header>
 
     <section id="introduction">
-        <p class="divider">※ . ※ . ※</p>
-        <p class="text">Édition collective réalisé à l'ÉSAD d'Orléans par les étudiants de 3ème années durant le cours d'interactivité et design mobile. Inspiré du jeu de carte <i>Oblique stategies</i> de Brian Eno et re-exploité par de nombreux artistes, les participants ont pioché trois cartes (trois contraintes) avant de réaliser leur projet sur <b><a href="https://make.bitsy.org/" target="_blank">BITSY</a></b>, un petit moteur de jeu vidéo en ligne.</p>
-        <p class="divider">※ . ※ . ※</p>
+        <p class="divider">※   ※   ※</p>
+        <p class="text">
+            Édition collective réalisé à l'ÉSAD d'Orléans par les étudiants de 3ème années durant le cours d'interactivité et design mobile. 
+            <br> Chaques participants ont pioché trois cartes (trois contraintes) puis ont créé de courte expèrience interactive sur <b><a href="https://make.bitsy.org/" target="_blank">BITSY</a></b>, un petit moteur de jeu vidéo en ligne.
+            <br> Pour jouer, clickez sur un article, le jeu ce mettra en plein écran. Vous pouvez ensuite glisser (swap) dans 4 direction pour faire bouger 
+        </p>
+        <p class="text">Le set de carte est testable en fin de page et accéssible gratuitement sur Github.</p>
+        <p class="divider">※   ※   ※</p>
     </section>
 
-    <div class="playable-cards">
+    <!-- <div class="playable-cards">
         <div>🃑</div>
         <div>🃒</div>
         <div>🃓</div>
-    </div>
+    </div> -->
 
     <section id="articles-container">
-        <article class="game" id="game-0">
+        <!-- <article class="game" id="game-0">
             <h2>Oh, Dolor ! <br> Oh, Aflicción !</h2>
-            <!-- <h3>Sous-titre</h3> -->
-            <p class="cards">🃑 enquête | des... a quel prix ? | union</p>
+            <h3>Sous-titre</h3>
+
+            <ul class="cards">
+                <li class="card">🃑 enquête</li>
+                <li class="card">🃒 des... a quel prix ?</li>
+                <li class="card">🃓 union</li>
+            </ul>
             
             <div class="bitsy-container">
-                <p class="click-to-play">clique pour lancer...</p>
                 <img src="/src/Games/MA/tvbp.jpg" alt="cover" srcset="" class="cover">
-                <iframe src="/src/Games/RM/____attendue_dans_le_centre_vill.html" frameborder="0" width="100%" style="display: none"></iframe>
+                <div class="iframe-container active" class="active" style="display: none">
+                    <div class="close">X</div>
+                    <iframe src="/src/Games/RM/____attendue_dans_le_centre_vill.html" frameborder="0" width="100%"></iframe>
+                </div>
             </div>
             
-            <!-- <p class="additional">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae, ratione eaque non dignissimos itaque sint? Earum repellendus delectus assumenda quae voluptates, eos, culpa fuga, omnis cumque expedita corrupti quasi nostrum?</p> -->
-            <p>Robin Moretti</p>
+            <p class="additional">Lorsque les pucerons font leur entré dans les jardins, c'est les coccinelles qui prennent le relais.</p>
+            <p class="author">Robin Moretti</p>
         </article>
+
+        <div class="divider"></div>
 
         <article class="game" id="game-0">
             <h2>Titre</h2>
@@ -51,13 +65,12 @@
             <p class="cards">cart 1, carte 2, carte 3</p>
             
             <div class="bitsy-container">
-                <p class="click-to-play">clique pour lancer...</p>
                 <img src="/src/Games/RM/recording.gif" alt="cover" srcset="" class="cover">
                 <iframe src="/src/Games/RM/____attendue_dans_le_centre_vill.html" frameborder="0" width="100%" style="display: none"></iframe>
             </div>
             <p class="additional">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae, ratione eaque non dignissimos itaque sint? Earum repellendus delectus assumenda quae voluptates, eos, culpa fuga, omnis cumque expedita corrupti quasi nostrum?</p>
         </article>
-    </section>
+    </section> -->
 </body>
 
 <script src="dist/app.js"></script>

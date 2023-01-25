@@ -6,14 +6,18 @@
     }
 
     .text{
-        margin:0.5rem 0;
+        margin:1rem 0;
         text-align: justify;
     }
 }
 
 #articles-container{
     .game{
-        margin-bottom: 3rem;
+        &:hover{
+            cursor: pointer;
+        }
+        // margin-bottom: 3rem;
+
         h2{
             font-size: 1.2rem;
             font-weight: bolder;
@@ -21,27 +25,50 @@
         }
 
         h3{
+            margin-top: 0.2rem;
             font-size: 1rem;
         }
 
         .cards{
+            margin-top: 0.4rem;
             font-size: 0.8rem;
+
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
         }
 
         .bitsy-container{
-            margin-top: 0.5rem;
+            margin: 1.2rem 0;
             position: relative;
-
-            .click-to-play{
-                // position: absolute;
-                // bottom: 10px; right: 10px;
-                font-size: 14px;
-                font-weight: lighter;
-                // color: white;
-            }
     
             img{
                 max-width: 100%;
+            }
+
+            .cover{
+                -webkit-box-shadow: 5px 5px 31px 0px rgba(0,0,0,0.44); 
+                box-shadow: 5px 5px 31px 0px rgba(0,0,0,0.44);
+                transform: scale(0.98);
+                transition: 0.2s transform;
+                &:hover{
+                    transform: scale(1);
+                }
+            }
+
+            .iframe-container.active{
+                position: fixed;
+                left: 0; top: 0;
+                width: 100vw; height: 100vh;
+
+                .close{
+                    position: fixed;
+                    left: 20px; top: 20px;
+                }
+
+                iframe{
+                    width: 100%; height: 100%;
+                }
             }
         }
 
@@ -50,5 +77,13 @@
             font-size: 0.8rem;
             line-height: 0.9rem;
         }
+        .author{
+            margin-top: 1rem;
+            text-align: right;
+        }
+    }
+    .divider{
+        border-bottom: dotted 5px black;
+        margin: 3rem 0;
     }
 }

@@ -1,15 +1,15 @@
 @import './variables';
 
 @font-face {
-    font-family: 'Agrandir';
-    src: url('/src/font/PPAgrandir-Regular.otf') format('truetype');
+    font-family: 'Unbounded';
+    src: url('/src/font/Unbounded-VariableFont_wght.ttf') format('truetype');
     font-display: swap;
 }
 
 html{
-    font-family: 'Agrandir', sans-serif;
+    font-family: 'Unbounded', sans-serif;
     color: #1F0318;
-    font-size: 20px;
+    font-size: 17px;
     line-height: 1.35rem;
     
     // @media screen and (max-width: 710px) {
@@ -20,5 +20,13 @@ html{
 * {-webkit-font-smoothing: antialiased;}
 
 a{
-    text-decoration: underline;
+    text-decoration: none;
+    border-bottom: dotted 3px #1F0318;
+}
+
+.bold{
+    font-weight: bold;
+}
+.italic{
+    font-style: italic;
 }
