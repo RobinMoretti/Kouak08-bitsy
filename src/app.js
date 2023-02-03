@@ -1,4 +1,5 @@
 import './sass/style.scss'
+
 let games = [
     {
         title: "Oh, Dolor ! <br> Oh, Aflicción !",
@@ -7,6 +8,8 @@ let games = [
         path: "/src/Games/RM/____attendue_dans_le_centre_vill.html",
         coverPath: "/src/Games/MA/tvbp.jpg",
         note: "Lorsque les pucerons font leur entré dans les jardins, c'est les coccinelles qui prennent le relais.",
+        backgroundColor: "#E0FEF2",
+        darkColor: "rgb(91, 90, 96)",
         author: "Robin Moretti",
     },
     {
@@ -16,6 +19,8 @@ let games = [
         path: "/src/Games/RM/____attendue_dans_le_centre_vill.html2",
         coverPath: "/src/Games/MA/tvbp.jpg",
         note: "Lorsque les pucerons font leur entré dans les jardins, c'est les coccinelles qui prennent le relais.",
+        backgroundColor: "#E0FEF2",
+        darkColor: "rgb(91, 90, 96)",
         author: "Robin Moretti",
     }
 ]
@@ -24,6 +29,7 @@ let gameContainer = document.getElementById("articles-container");
 let divider = document.createElement("div");
 divider.classList.add("divider");
 
+// generate game and inject it in html
 for (let index = 0; index < games.length; index++) {
     const game = games[index];
     let gameTemplate = getGameHtml(game, index);
@@ -31,7 +37,43 @@ for (let index = 0; index < games.length; index++) {
     gameContainer.appendChild(gameTemplate);
     if(index <= games.length -2) gameContainer.appendChild(divider);
 }
-console.log();
+
+// set game modal functions
+let modalGame = document.querySelector(".game-modal");
+let svgBackground = modalGame.querySelector("svg path");
+let closeButton = modalGame.querySelector(".close");
+let iframe = modalGame.querySelector("iframe");
+document.querySelector(".close").addEventListener("click", () => {
+    hideGame();
+})
+
+let timeout;
+
+function displayGame(game) {
+    document.body.style.overflow = "hidden";
+    svgBackground.style.fill = game.backgroundColor;
+    closeButton.style.color = game.darkColor;
+
+    clearTimeout(timeout)
+    iframe.setAttribute("src", game.path);
+
+    setTimeout(() => {
+        closeButton.classList.add("visible")
+        iframe.classList.add("visible")
+        iframe.focus()
+    }, 500);
+
+    modalGame.classList.add("active");
+}
+
+function hideGame() {
+    document.body.style.overflow = "unset";
+    modalGame.classList.remove("active");
+    iframe.classList.remove("visible")
+    timeout = setTimeout(() => {
+        iframe.setAttribute("src", "");
+    }, 1000)
+}
 
 function getGameHtml(game, index) {
     let template = document.createElement("article");
@@ -62,29 +104,10 @@ function getGameHtml(game, index) {
     template.appendChild(subtitile)
     template.appendChild(cardsContainer)
 
-    let bitsyContainer = document.createElement("div");
-    bitsyContainer.classList.add("bitsy-container");
-
-    let iframeContainer = document.createElement("div");
-    iframeContainer.classList.add("iframe-container");
-
     let cover = document.createElement("img");
     cover.setAttribute("src", game.coverPath);
     cover.classList.add("cover");
-    bitsyContainer.appendChild(cover)
-
-    let close = document.createElement("div");
-    close.classList.add("close");
-    close.innerHTML = "X";
-
-    let iframe = document.createElement("iframe");
-    iframe.style.display = "none";
-    iframe.setAttribute("src", game.path);
-
-    iframeContainer.appendChild(close)
-    iframeContainer.appendChild(iframe)
-    bitsyContainer.appendChild(iframeContainer)
-    template.appendChild(bitsyContainer)
+    template.appendChild(cover)
     
     let additionalNote = document.createElement("p");
     additionalNote.classList.add("additional");
@@ -98,33 +121,15 @@ function getGameHtml(game, index) {
     template.appendChild(author)
 
     cover.addEventListener("click", () => {
-        displayGame(iframe);
+        displayGame(game);
     })
-    
+
     return template;
 }
 
-function displayGame(gameTarget) {
-    console.log('element =', gameTarget) 
-    if (gameTarget.classList.contains("active")) {
-        
-    } else {
-        gameTarget.style.display = "initial";
-        gameTarget.classList.contains("active")  
-    }
-}
 
 
-// window.onload = function () {
-    
-//     // animated anchors
-//     // document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-//     //     anchor.addEventListener('click', function (e) {
-//     //         e.preventDefault();
-    
-//     //         document.querySelector(this.getAttribute('href')).scrollIntoView({
-//     //             behavior: 'smooth'
-//     //         });
-//     //     });
-//     // });
-// }
+// function randomIntFromInterval(min, max) { // min and max included 
+//     return Math.floor(Math.random() * (max - min + 1) + min)
+//   }
+  
