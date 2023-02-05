@@ -25,33 +25,91 @@ function styleInject(css, ref) {
   }
 }
 
-var css_248z = "@import '/node_modules/destyle.css/destyle.min.css';\n@font-face {\n  font-family: \"Unbounded\";\n  src: url(\"/src/font/Unbounded-VariableFont_wght.ttf\") format(\"truetype\");\n  font-display: swap;\n}\nhtml {\n  font-family: \"Unbounded\", sans-serif;\n  color: #1F0318;\n  font-size: 17px;\n  line-height: 1.35rem;\n}\n\n* {\n  -webkit-font-smoothing: antialiased;\n}\n\na {\n  text-decoration: none;\n  border-bottom: dotted 3px #1F0318;\n}\n\n.bold {\n  font-weight: bold;\n}\n\n.italic {\n  font-style: italic;\n}\n\nbody {\n  padding: 30px 20px;\n  background-color: #F2FAF0;\n}\n\nheader h1 {\n  font-size: 2rem;\n  font-weight: 900;\n  margin-bottom: 5px;\n}\nheader h2 {\n  font-size: 1.5rem;\n  font-weight: 450;\n  margin-top: 1rem;\n  line-height: 1.7rem;\n}\n\n#introduction {\n  margin: 1.7rem 0;\n}\n#introduction .divider {\n  text-align: center;\n}\n#introduction .text {\n  margin: 1rem 0;\n  text-align: justify;\n}\n\n#articles-container .game:hover {\n  cursor: pointer;\n}\n#articles-container .game h2 {\n  font-size: 1.2rem;\n  font-weight: bolder;\n  text-transform: uppercase;\n}\n#articles-container .game h3 {\n  margin-top: 0.2rem;\n  font-size: 1rem;\n}\n#articles-container .game .cards {\n  margin-top: 0.4rem;\n  font-size: 0.8rem;\n  display: flex;\n  justify-content: space-between;\n  flex-wrap: wrap;\n}\n#articles-container .game img {\n  max-width: 100%;\n}\n#articles-container .game .cover {\n  margin: 1.5rem 0;\n  -webkit-box-shadow: 5px 5px 31px 0px rgba(0, 0, 0, 0.44);\n  box-shadow: 5px 5px 31px 0px rgba(0, 0, 0, 0.44);\n  transform: scale(0.98);\n  transition: 0.2s transform;\n}\n#articles-container .game .cover:hover {\n  transform: scale(1);\n}\n#articles-container .game .additional {\n  margin-top: 0.5rem;\n  font-size: 0.8rem;\n  line-height: 0.9rem;\n}\n#articles-container .game .author {\n  margin-top: 1rem;\n  text-align: right;\n}\n#articles-container .divider {\n  border-bottom: dotted 5px black;\n  margin: 3rem 0;\n}\n\n.game-modal {\n  position: fixed;\n  height: 0;\n  transition: all 0.3s;\n  overflow: hidden;\n  left: 50vw;\n  top: 50vh;\n  width: 0vw;\n  height: 0vh;\n}\n.game-modal .close {\n  width: 50px;\n  height: 50px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  z-index: 4;\n  position: relative;\n  font-weight: bolder;\n  opacity: 0;\n  transition: opacity 0.3s;\n}\n.game-modal .close.visible {\n  opacity: 1;\n}\n.game-modal iframe {\n  position: absolute;\n  left: 0;\n  top: 0;\n  z-index: 2;\n  width: 100%;\n  height: 100%;\n  opacity: 0;\n  transition: opacity 0.3s;\n}\n.game-modal iframe.visible {\n  opacity: 1;\n}\n.game-modal .backgroung {\n  position: absolute;\n  left: 0%;\n  top: 0%;\n  width: 100%;\n  height: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  pointer-events: none;\n}\n.game-modal .backgroung svg {\n  transition: transform 1s;\n  transform: scale(0.1);\n}\n\n.game-modal.active {\n  width: 100vw;\n  height: 100vh;\n  left: 0vw;\n  top: 0vh;\n}\n.game-modal.active svg {\n  transform: scale(5);\n}\n\n.align-right {\n  text-align: right;\n}\n\n.align-left {\n  text-align: left;\n}";
+var css_248z = "@import '/node_modules/destyle.css/destyle.min.css';\n@font-face {\n  font-family: \"Unbounded\";\n  src: url(\"/src/font/Unbounded-VariableFont_wght.ttf\") format(\"truetype\");\n  font-display: swap;\n}\nhtml {\n  font-family: \"Unbounded\", sans-serif;\n  color: #1F0318;\n  font-size: 17px;\n  line-height: 1.35rem;\n}\n\n* {\n  -webkit-font-smoothing: antialiased;\n}\n\na {\n  text-decoration: none;\n  border-bottom: dotted 3px #1F0318;\n}\n\n.bold {\n  font-weight: bold;\n}\n\n.italic {\n  font-style: italic;\n}\n\nbody {\n  padding: 30px 20px;\n  background-color: #F2FAF0;\n  max-width: 400px;\n}\n\n@media (min-width: 800px) {\n  body {\n    width: 450px;\n    margin: auto;\n    padding: 30px 45px;\n  }\n}\nhtml {\n  background: -moz-radial-gradient(0% 2%, circle, rgba(96, 16, 48, 0) 9px, #1F0318 10px, rgba(96, 16, 48, 0) 11px), -moz-radial-gradient(100% 100%, rgba(96, 16, 48, 0) 9px, #1F0318 10px, rgba(96, 16, 48, 0) 11px), none;\n  background: -webkit-radial-gradient(0% 2%, circle, rgba(96, 16, 48, 0) 9px, #1F0318 10px, rgba(96, 16, 48, 0) 11px), -webkit-radial-gradient(100% 100%, rgba(96, 16, 48, 0) 9px, #1F0318 10px, rgba(96, 16, 48, 0) 11px), none;\n  background: -ms-radial-gradient(0% 2%, circle, rgba(96, 16, 48, 0) 9px, #1F0318 10px, rgba(96, 16, 48, 0) 11px), -ms-radial-gradient(100% 100%, rgba(96, 16, 48, 0) 9px, #1F0318 10px, rgba(96, 16, 48, 0) 11px), none;\n  background: -o-radial-gradient(0% 2%, circle, rgba(96, 16, 48, 0) 9px, #1F0318 10px, rgba(96, 16, 48, 0) 11px), -o-radial-gradient(100% 100%, rgba(96, 16, 48, 0) 9px, #1F0318 10px, rgba(96, 16, 48, 0) 11px), none;\n  background: radial-gradient(0% 2%, circle, rgba(96, 16, 48, 0) 9px, #1F0318 10px, rgba(96, 16, 48, 0) 11px), radial-gradient(100% 100%, rgba(96, 16, 48, 0) 9px, #1F0318 10px, rgba(96, 16, 48, 0) 11px), none;\n  background-size: 20px 20px;\n}\n\nheader h1 {\n  font-size: 2rem;\n  font-weight: 900;\n  margin-bottom: 5px;\n}\nheader h2 {\n  font-size: 1.5rem;\n  font-weight: 450;\n  margin-top: 1rem;\n  line-height: 1.7rem;\n}\n\n#introduction {\n  margin: 1.7rem 0;\n}\n#introduction br {\n  display: block;\n  margin: 10px 0;\n}\n#introduction .divider {\n  text-align: center;\n}\n#introduction .text {\n  margin: 1rem 0;\n}\n\n@media (min-width: 800px) {\n  #introduction {\n    margin: 1.8rem 0;\n  }\n}\n#articles-container .game:hover {\n  cursor: pointer;\n}\n#articles-container .game h2 {\n  font-size: 1.2rem;\n  font-weight: bolder;\n  text-transform: uppercase;\n}\n#articles-container .game h3 {\n  margin-top: 0.2rem;\n  font-size: 1rem;\n}\n#articles-container .game .cards {\n  margin-top: 0.4rem;\n  font-size: 0.8rem;\n  display: flex;\n  justify-content: space-between;\n  flex-wrap: wrap;\n}\n#articles-container .game img {\n  max-width: 100%;\n}\n#articles-container .game .cover {\n  margin: 1.5rem 0;\n  -webkit-box-shadow: 5px 5px 31px 0px rgba(0, 0, 0, 0.44);\n  box-shadow: 5px 5px 31px 0px rgba(0, 0, 0, 0.44);\n  transform: scale(0.98);\n  transition: 0.2s transform;\n}\n#articles-container .game .cover:hover {\n  transform: scale(1);\n}\n#articles-container .game .additional {\n  margin-top: 0.5rem;\n  font-size: 0.8rem;\n  line-height: 0.9rem;\n}\n#articles-container .game .author {\n  margin-top: 1rem;\n  text-align: right;\n}\n#articles-container .divider {\n  border-bottom: dotted 5px black;\n  margin: 3rem 0;\n}\n\n@media (min-width: 800px) {\n  #articles-container .game {\n    margin-bottom: 2rem;\n  }\n  #articles-container .game .cards {\n    font-size: 0.9rem;\n  }\n  #articles-container .game .additional {\n    font-size: 0.9rem;\n    line-height: 1.2rem;\n  }\n}\n.game-modal {\n  position: fixed;\n  height: 0;\n  transition: all 0.3s;\n  overflow: hidden;\n  width: 100vw;\n  height: 100vh;\n  left: 0vw;\n  top: 0vh;\n  pointer-events: none;\n  opacity: 0;\n}\n.game-modal .close {\n  width: 50px;\n  height: 50px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  z-index: 4;\n  position: relative;\n  font-weight: bolder;\n  opacity: 0;\n  transition: opacity 0.3s;\n}\n.game-modal .close.visible {\n  opacity: 1;\n}\n.game-modal iframe {\n  position: absolute;\n  left: 0;\n  top: 0;\n  z-index: 2;\n  width: 100%;\n  height: 100%;\n  opacity: 0;\n  transition: opacity 0.3s;\n}\n.game-modal iframe.visible {\n  opacity: 1;\n}\n.game-modal .backgroung {\n  position: absolute;\n  left: 0%;\n  top: 0%;\n  width: 100%;\n  height: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  pointer-events: none;\n}\n.game-modal .backgroung svg {\n  transition: transform 2s;\n  transform: scale(0.1);\n}\n\n.game-modal.active {\n  pointer-events: unset;\n  opacity: 1;\n}\n.game-modal.active svg {\n  transform: scale(5);\n}\n\n@media (min-width: 800px) {\n  .game-modal iframe {\n    height: 80vh;\n    margin-top: 10vh;\n  }\n}\n.align-right {\n  text-align: right;\n}\n\n.align-left {\n  text-align: left;\n}";
 styleInject(css_248z);
 
 let games = [
     {
         title: "Oh, Dolor ! <br> Oh, Aflicción !",
-        subtitle: "Sous-titre",
+        subtitle: null,
         cards: ["enquête", "des... a quel prix ?", "union"],
-        path: "/src/Games/RM/____attendue_dans_le_centre_vill.html",
+        path: "/src/Games/MA/index.html",
         coverPath: "/src/Games/MA/tvbp.jpg",
-        note: "Lorsque les pucerons font leur entré dans les jardins, c'est les coccinelles qui prennent le relais.",
+        note: null,
         backgroundColor: "#E0FEF2",
         darkColor: "rgb(91, 90, 96)",
-        author: "Robin Moretti",
+        author: "Matis Arvieu",
     },
     {
-        title: "Oh, Dolor ! <br> Oh, Aflicción !",
-        subtitle: "Sous-titre",
-        cards: ["enquête", "des... a quel prix ?", "union"],
-        path: "/src/Games/RM/____attendue_dans_le_centre_vill.html2",
+        title: "Les coccinelles n'en jamais  assez",
+        subtitle: null,
+        cards: ["critique", "...n'en font pas assez", "la mort"],
+        path: "/src/Games/LM/____les_coccinelles_n_en_font_ja.html",
         coverPath: "/src/Games/MA/tvbp.jpg",
         note: "Lorsque les pucerons font leur entré dans les jardins, c'est les coccinelles qui prennent le relais.",
-        backgroundColor: "#E0FEF2",
-        darkColor: "rgb(91, 90, 96)",
-        author: "Robin Moretti",
-    }
+        backgroundColor: "#dae0ff",
+        darkColor: "#76c7a6",
+        author: "Lola Mevellec",
+    },
+    {
+        title: "Mémozone",
+        subtitle: "La délivrance et la polémique",
+        cards: ["banque", "la délivrance et la polémique", "france"],
+        path: "/src/Games/YS/______________memozone__________.html",
+        coverPath: "/src/Games/MA/tvbp.jpg",
+        note: "10 ans après la mort de votre mère et la disparition de votre père, un rendez-vous dans un laboratoire voisin vas éclaircir vos doutes et vous replonger dans dans vos souvenirs les plus pofonds.",
+        backgroundColor: "#070aff",
+        darkColor: "#ff20ce",
+        author: "Yoan Schmitt",
+    },
+    {
+        title: "Ils rêvent de l'après.",
+        subtitle: null,
+        cards: ["avis de décès", "... rêve de l'après...", "espionnage"],
+        path: "/src/Games/YS/______________memozone__________.html",
+        coverPath: "/src/Games/MA/tvbp.jpg",
+        note: "Tiré d’une histoire vraie, cette enquête où on incarne un inspecteur reconstitue l’histoire de deux personnes qui ont subit une tentative d’assassinat. Il faut chercher les indices pour trouver le dénouement de l’enquête avant d’arriver à la fin du jeu et comprendre comment l’enquête aboutit de cette façon. Jeu narratif, il n’y a pas besoin de faire de choix pour arriver au bout de l’histoire si ce n’est retrouver des objets et indices essantiels pour déverrouiller des passages.",
+        backgroundColor: "#212938",
+        darkColor: "#af7c7c",
+        author: "Céline Rabineau",
+    },
+    {
+        title: "The lockdown a certain idea of hell?",
+        subtitle: null,
+        cards: ["chronique", "...une certaine idée du...", "communisme"],
+        path: "/src/Games/YS/______________memozone__________.html",
+        coverPath: "/src/Games/MA/tvbp.jpg",
+        note: "Petit jeu sur la Chine et la surveillance de ses citoyens pendant le confinement avec l'introduction des crédits sociaux, de mon point de vue Européen blanc.",
+        backgroundColor: "#546494",
+        darkColor: "#0c103b",
+        author: "Carla Mazzuca",
+    },
+    {
+        title: "HyperRadical, un jeu d'extrospection",
+        subtitle: null,
+        cards: ["interview", "un jeu d'...", "radicalité"],
+        path: "/src/Games/YS/______________memozone__________.html",
+        coverPath: "/src/Games/MA/tvbp.jpg",
+        note: "L'accumulation de résolutions peut parfois amener à une certaine forme de stress... Alors comment allez-vous gérer le vôtre ? Basé sur l'interview d'une vingtaine de personnes, ce jeu vous propose de vivre un huit clos à la quête de votre mémoire. Parcourez les pièces à la recherche de vos notes, débusquer les différentes clés cachées afin de découvrir l'étendue de votre maison.",
+        backgroundColor: "#1c315e",
+        darkColor: "#985c5d",
+        author: "Scott Mauger",
+    },
+    {
+        title: "10 Bonne raisons de ...",
+        subtitle: "Édition spécial artisanat",
+        cards: ["artisanat", "10 Bonne raisons de ...", "BD"],
+        path: "/src/Games/YS/______________memozone__________.html",
+        coverPath: "/src/Games/MA/tvbp.jpg",
+        note: "Interview de deux différents artisans (une reliause et un pâtissier), Remerciement à Stéphanie Trèsmois et Raphael Gautier pour avoir répondu à mes questions.",
+        backgroundColor: "#ffffff",
+        darkColor: "#000000",
+        author: "Oxana Boureau",
+    },
+
 ];
+
+games = games.sort((a, b) => 0.5 - Math.random());
 
 let gameContainer = document.getElementById("articles-container");
 let divider = document.createElement("div");
@@ -80,6 +138,7 @@ let timeout;
 function displayGame(game) {
     document.body.style.overflow = "hidden";
     svgBackground.style.fill = game.backgroundColor;
+    svgBackground.style.stroke = game.backgroundColor;
     closeButton.style.color = game.darkColor;
 
     clearTimeout(timeout);

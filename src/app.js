@@ -3,27 +3,85 @@ import './sass/style.scss'
 let games = [
     {
         title: "Oh, Dolor ! <br> Oh, Aflicción !",
-        subtitle: "Sous-titre",
+        subtitle: null,
         cards: ["enquête", "des... a quel prix ?", "union"],
-        path: "/src/Games/RM/____attendue_dans_le_centre_vill.html",
+        path: "/src/Games/MA/index.html",
         coverPath: "/src/Games/MA/tvbp.jpg",
-        note: "Lorsque les pucerons font leur entré dans les jardins, c'est les coccinelles qui prennent le relais.",
+        note: null,
         backgroundColor: "#E0FEF2",
         darkColor: "rgb(91, 90, 96)",
-        author: "Robin Moretti",
+        author: "Matis Arvieu",
     },
     {
-        title: "Oh, Dolor ! <br> Oh, Aflicción !",
-        subtitle: "Sous-titre",
-        cards: ["enquête", "des... a quel prix ?", "union"],
-        path: "/src/Games/RM/____attendue_dans_le_centre_vill.html2",
+        title: "Les coccinelles n'en jamais  assez",
+        subtitle: null,
+        cards: ["critique", "...n'en font pas assez", "la mort"],
+        path: "/src/Games/LM/____les_coccinelles_n_en_font_ja.html",
         coverPath: "/src/Games/MA/tvbp.jpg",
         note: "Lorsque les pucerons font leur entré dans les jardins, c'est les coccinelles qui prennent le relais.",
-        backgroundColor: "#E0FEF2",
-        darkColor: "rgb(91, 90, 96)",
-        author: "Robin Moretti",
-    }
+        backgroundColor: "#dae0ff",
+        darkColor: "#76c7a6",
+        author: "Lola Mevellec",
+    },
+    {
+        title: "Mémozone",
+        subtitle: "La délivrance et la polémique",
+        cards: ["banque", "la délivrance et la polémique", "france"],
+        path: "/src/Games/YS/______________memozone__________.html",
+        coverPath: "/src/Games/MA/tvbp.jpg",
+        note: "10 ans après la mort de votre mère et la disparition de votre père, un rendez-vous dans un laboratoire voisin vas éclaircir vos doutes et vous replonger dans dans vos souvenirs les plus pofonds.",
+        backgroundColor: "#070aff",
+        darkColor: "#ff20ce",
+        author: "Yoan Schmitt",
+    },
+    {
+        title: "Ils rêvent de l'après.",
+        subtitle: null,
+        cards: ["avis de décès", "... rêve de l'après...", "espionnage"],
+        path: "/src/Games/YS/______________memozone__________.html",
+        coverPath: "/src/Games/MA/tvbp.jpg",
+        note: "Tiré d’une histoire vraie, cette enquête où on incarne un inspecteur reconstitue l’histoire de deux personnes qui ont subit une tentative d’assassinat. Il faut chercher les indices pour trouver le dénouement de l’enquête avant d’arriver à la fin du jeu et comprendre comment l’enquête aboutit de cette façon. Jeu narratif, il n’y a pas besoin de faire de choix pour arriver au bout de l’histoire si ce n’est retrouver des objets et indices essantiels pour déverrouiller des passages.",
+        backgroundColor: "#212938",
+        darkColor: "#af7c7c",
+        author: "Céline Rabineau",
+    },
+    {
+        title: "The lockdown a certain idea of hell?",
+        subtitle: null,
+        cards: ["chronique", "...une certaine idée du...", "communisme"],
+        path: "/src/Games/YS/______________memozone__________.html",
+        coverPath: "/src/Games/MA/tvbp.jpg",
+        note: "Petit jeu sur la Chine et la surveillance de ses citoyens pendant le confinement avec l'introduction des crédits sociaux, de mon point de vue Européen blanc.",
+        backgroundColor: "#546494",
+        darkColor: "#0c103b",
+        author: "Carla Mazzuca",
+    },
+    {
+        title: "HyperRadical, un jeu d'extrospection",
+        subtitle: null,
+        cards: ["interview", "un jeu d'...", "radicalité"],
+        path: "/src/Games/YS/______________memozone__________.html",
+        coverPath: "/src/Games/MA/tvbp.jpg",
+        note: "L'accumulation de résolutions peut parfois amener à une certaine forme de stress... Alors comment allez-vous gérer le vôtre ? Basé sur l'interview d'une vingtaine de personnes, ce jeu vous propose de vivre un huit clos à la quête de votre mémoire. Parcourez les pièces à la recherche de vos notes, débusquer les différentes clés cachées afin de découvrir l'étendue de votre maison.",
+        backgroundColor: "#1c315e",
+        darkColor: "#985c5d",
+        author: "Scott Mauger",
+    },
+    {
+        title: "10 Bonne raisons de ...",
+        subtitle: "Édition spécial artisanat",
+        cards: ["artisanat", "10 Bonne raisons de ...", "BD"],
+        path: "/src/Games/YS/______________memozone__________.html",
+        coverPath: "/src/Games/MA/tvbp.jpg",
+        note: "Interview de deux différents artisans (une reliause et un pâtissier), Remerciement à Stéphanie Trèsmois et Raphael Gautier pour avoir répondu à mes questions.",
+        backgroundColor: "#ffffff",
+        darkColor: "#000000",
+        author: "Oxana Boureau",
+    },
+
 ]
+
+games = games.sort((a, b) => 0.5 - Math.random());
 
 let gameContainer = document.getElementById("articles-container");
 let divider = document.createElement("div");
@@ -52,6 +110,7 @@ let timeout;
 function displayGame(game) {
     document.body.style.overflow = "hidden";
     svgBackground.style.fill = game.backgroundColor;
+    svgBackground.style.stroke = game.backgroundColor;
     closeButton.style.color = game.darkColor;
 
     clearTimeout(timeout)
