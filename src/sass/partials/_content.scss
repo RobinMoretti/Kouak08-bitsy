@@ -110,6 +110,7 @@
     left: 0vw; top: 0vh;
     pointer-events: none;
     opacity: 0;
+    z-index: 10;
 
     .close{
         width: 50px; height: 50px;
@@ -172,4 +173,24 @@
             margin-top: 10vh;
         }
     }    
+}
+
+
+.mobile-message{
+    display: none;
+}
+
+
+@media (min-width: 800px) {
+    .mobile-message{
+        display: unset;
+        position: fixed;
+        left: 30px; bottom: 30px;
+        background-color: #1F0318;
+        color: #F2FAF0;
+        padding: 10px 20px;
+        border-radius: 30px;
+        max-width: calc((100vw - 500px)/2);
+        text-align: center;
+    }
 }

@@ -11,10 +11,6 @@ html{
     color: #1F0318;
     font-size: 17px;
     line-height: 1.35rem;
-    
-    // @media screen and (max-width: 710px) {
-    //     font-size: 18px;
-    // }
 }
 
 * {-webkit-font-smoothing: antialiased;}
@@ -22,6 +18,7 @@ html{
 a{
     text-decoration: none;
     border-bottom: dotted 3px #1F0318;
+    font-weight: bold;
 }
 
 .bold{

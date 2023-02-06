@@ -9,15 +9,12 @@ body{
         width: 500px;
         margin: auto;
         padding: 30px 45px;
+        border-left: dotted 5px #1F0318;
+        border-right: dotted 5px #1F0318;
     }
 }
 
 
-html{
-    background: -moz-radial-gradient(0% 2%, circle, rgba(96, 16, 48, 0) 9px, #1F0318 10px, rgba(96, 16, 48, 0) 11px), -moz-radial-gradient(100% 100%, rgba(96, 16, 48, 0) 9px, #1F0318 10px, rgba(96, 16, 48, 0) 11px), none;
-    background: -webkit-radial-gradient(0% 2%, circle, rgba(96, 16, 48, 0) 9px, #1F0318 10px, rgba(96, 16, 48, 0) 11px), -webkit-radial-gradient(100% 100%, rgba(96, 16, 48, 0) 9px, #1F0318 10px, rgba(96, 16, 48, 0) 11px), none;
-    background: -ms-radial-gradient(0% 2%, circle, rgba(96, 16, 48, 0) 9px, #1F0318 10px, rgba(96, 16, 48, 0) 11px), -ms-radial-gradient(100% 100%, rgba(96, 16, 48, 0) 9px, #1F0318 10px, rgba(96, 16, 48, 0) 11px), none;
-    background: -o-radial-gradient(0% 2%, circle, rgba(96, 16, 48, 0) 9px, #1F0318 10px, rgba(96, 16, 48, 0) 11px), -o-radial-gradient(100% 100%, rgba(96, 16, 48, 0) 9px, #1F0318 10px, rgba(96, 16, 48, 0) 11px), none;
-    background: radial-gradient(0% 2%, circle, rgba(96, 16, 48, 0) 9px, #1F0318 10px, rgba(96, 16, 48, 0) 11px), radial-gradient(100% 100%, rgba(96, 16, 48, 0) 9px, #1F0318 10px, rgba(96, 16, 48, 0) 11px), none;
+html{ 
     background-size: 20px 20px;
 }

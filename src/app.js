@@ -161,12 +161,12 @@ function getGameHtml(game, index) {
 
     template.appendChild(header)
     template.appendChild(subtitile)
-    template.appendChild(cardsContainer)
 
     let cover = document.createElement("img");
     cover.setAttribute("src", game.coverPath);
     cover.classList.add("cover");
     template.appendChild(cover)
+    template.appendChild(cardsContainer)
     
     let additionalNote = document.createElement("p");
     additionalNote.classList.add("additional");
