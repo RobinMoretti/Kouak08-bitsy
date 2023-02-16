@@ -49,6 +49,9 @@
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
+            .card{
+                margin-right: 5px;
+            }
         }
 
         img{
@@ -61,6 +64,7 @@
             box-shadow: 5px 5px 31px 0px rgba(0,0,0,0.44);
             transform: scale(0.98);
             transition: 0.2s transform;
+            border-radius: 4px;
             &:hover{
                 transform: scale(1);
             }
