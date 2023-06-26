@@ -111,10 +111,10 @@ let games = [
         subtitle: "",
         cards: ["grand format", "null", "météo"],
         path: "/src/Games/SR/eliean__exit__y________fade_w__.html",
-        coverPath: "/src/Games/BO/Cover_10_Bonnes_raisons_de_.png",
+        coverPath: "/src/Games/SR/SR-preview.gif",
         note: "",
-        backgroundColor: "#ffffff",
-        darkColor: "#000000",
+        backgroundColor: "#14223b",
+        darkColor: "#4968ae",
         author: "Suzie Roux",
     },
     
