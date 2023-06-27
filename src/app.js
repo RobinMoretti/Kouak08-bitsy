@@ -39,7 +39,7 @@ let games = [
         subtitle: null,
         cards: ["avis de décès", "... rêve de l'après...", "espionnage"],
         path: "/src/Games/CR/index.html",
-        coverPath: "/src/Games/CR/recording (8).GIF",
+        coverPath: "/src/Games/CR/recording.GIF",
         note: "Tiré d’une histoire vraie, cette enquête où on incarne un inspecteur reconstitue l’histoire de deux personnes qui ont subit une tentative d’assassinat. Il faut chercher les indices pour trouver le dénouement de l’enquête avant d’arriver à la fin du jeu et comprendre comment l’enquête aboutit de cette façon. Jeu narratif, il n’y a pas besoin de faire de choix pour arriver au bout de l’histoire si ce n’est retrouver des objets et indices essantiels pour déverrouiller des passages.",
         backgroundColor: "#212938",
         darkColor: "#af7c7c",
