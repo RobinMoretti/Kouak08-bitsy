@@ -92,6 +92,8 @@ let games = [
     
 ]
 
+console.log('games =', games)
+
 games = games.sort((a, b) => 0.5 - Math.random());
 
 let gameContainer = document.getElementById("articles-container");
